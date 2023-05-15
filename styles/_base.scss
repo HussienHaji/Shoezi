@@ -11,6 +11,7 @@
 html {
   font-size: 62.5%;
   font-family: "Poppins", sans-serif;
+  scroll-behavior: smooth;
 }
 
 body {
@@ -36,6 +37,10 @@ img{
   object-fit: cover;
 }
 
+section{
+  padding: 10rem 0;
+}
+
 .container {
   max-width: 144rem;
   overflow-x: hidden;
@@ -45,9 +50,11 @@ img{
   
 }
 
+
+
 @media screen and (max-width:700px) {
   .container{
-    padding: 0 2rem;
+    padding: 0 1rem;
   }
   
 }
@@ -60,3 +67,4 @@ img{
   font-size: 6.4rem;
   text-transform: capitalize;
 }
+

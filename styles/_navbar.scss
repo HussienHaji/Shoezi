@@ -5,6 +5,7 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
+  background-color: transparent;
 
   .logo {
     font-size: 3.6rem;
@@ -108,13 +109,11 @@
 
     .logo {
       position: relative;
-      z-index: 50;
     }
 
     .menu {
       display: block;
       position: relative;
-      z-index: 100;
     }
   }
 }

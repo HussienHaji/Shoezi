@@ -11,6 +11,7 @@
 html {
   font-size: 62.5%;
   font-family: "Poppins", sans-serif;
+  scroll-behavior: smooth;
 }
 
 body {
@@ -36,6 +37,10 @@ img {
      object-fit: cover;
 }
 
+section {
+  padding: 10rem 0;
+}
+
 .container {
   max-width: 144rem;
   overflow-x: hidden;
@@ -46,7 +51,7 @@ img {
 
 @media screen and (max-width: 700px) {
   .container {
-    padding: 0 2rem;
+    padding: 0 1rem;
   }
 }
 .word {
@@ -65,6 +70,7 @@ img {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  background-color: transparent;
 }
 .nav .logo {
   font-size: 3.6rem;
@@ -148,12 +154,10 @@ img {
   }
   .nav .logo {
     position: relative;
-    z-index: 50;
   }
   .nav .menu {
     display: block;
     position: relative;
-    z-index: 100;
   }
 }
 .header {
@@ -161,7 +165,7 @@ img {
   justify-content: space-between;
   align-items: center;
   color: #fff;
-  margin-top: -7%;
+  margin-top: -2.5rem;
 }
 .header .text-container {
   flex: 1;
@@ -230,19 +234,21 @@ img {
   font-weight: 700;
   transition: all 0.3s ease-in-out;
   border: 0.3rem solid transparent;
+  text-align: center;
+  cursor: pointer;
 }
 .btn:hover {
   background-color: transparent;
   border-color: #22ca83;
+  color: #22ca83;
 }
 
 .features {
   background-color: #fff;
-  padding: 5rem 0;
 }
 .features .icons-container {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(39.5rem, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
   justify-items: center;
   gap: 2rem;
   flex-wrap: wrap;
@@ -272,8 +278,28 @@ img {
   color: #999999;
 }
 
+@media screen and (max-width: 400px) {
+  .features .section-heading {
+    font-size: 4.5rem;
+  }
+  .features .icons-container .icon-box {
+    width: 100%;
+  }
+  .features .icons-container .icon-box .icon i {
+    width: 7rem;
+    height: 7rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .features .icons-container .icon-box .icon-info-container h3 {
+    font-size: 1.6rem;
+  }
+  .features .icons-container .icon-box .icon-info-container p {
+    font-size: 1.4rem;
+  }
+}
 .about {
-  padding: 5rem 0;
   overflow-x: hidden;
 }
 .about .container {
@@ -317,5 +343,82 @@ img {
   }
   .about .container .about-text-container p {
     font-size: 1.4rem;
+  }
+}
+.products {
+  background-color: #fff;
+  color: #000;
+}
+.products .container .products-container {
+  padding: 5rem 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(35rem, 1fr));
+  justify-content: center;
+  gap: 4rem;
+}
+.products .container .products-container .card .image-container {
+  background-color: #D9D9D9;
+}
+.products .container .products-container .card .image-container .imgage {
+  transform: translateX(-3rem);
+}
+.products .container .products-container .card .product-name {
+  font-size: 2.5rem;
+}
+.products .container .products-container .card .icons {
+  display: flex;
+  justify-content: space-between;
+  font-size: 2rem;
+  color: #22ca83;
+}
+.products .container .products-container .card .icons .rotate {
+  width: 5rem;
+  height: 5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 4rem;
+  transform: rotateZ(45deg);
+  border: 0.3rem solid #22ca83;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: all 0.5s ease-in-out;
+}
+.products .container .products-container .card .icons .rotate:hover {
+  color: #fff;
+  border: none;
+  background-color: #22ca83;
+}
+.products .container .products-container .card .price {
+  font-size: 2.5rem;
+  font-weight: 600;
+}
+.products .container .btn {
+  display: block;
+  margin: 0 auto;
+  color: #fff;
+  width: 15rem;
+}
+.products .container .btn:hover {
+  color: #22ca83;
+}
+
+@media screen and (max-width: 400px) {
+  .products .container .products-container {
+    grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+  }
+  .products .container .products-container .card {
+    width: 100%;
+  }
+  .products .container .products-container .card .product-name {
+    font-size: 2rem;
+  }
+  .products .container .products-container .card .icons .rotate {
+    width: 4rem;
+    height: 4rem;
+    font-size: 2.7rem;
+  }
+  .products .container .products-container .card .price {
+    font-size: 1.6rem;
   }
 }/*# sourceMappingURL=main.css.map */
