@@ -1,0 +1,99 @@
+.testimonial {
+  .container {
+    overflow: hidden;
+    h2 {
+      color: #fff;
+    }
+
+    .testimonial-container {
+      width: 70rem;
+      min-height: 30rem;
+      margin: 0 auto;
+      margin-top: 5rem;
+      position: relative;
+      border: $border;
+      background-color: #fff;
+      color: #000;
+      padding: 3rem 5rem;
+      padding-top: 6rem;
+      border-radius: 1rem;
+      text-align: center;
+     
+
+.circle{
+  position: absolute;
+  z-index: -1;
+  width: 90%;
+  transform: translate(-50%, -50%);
+  left: 50%;
+  top: 20%;
+}
+
+      .person-image {
+        position: absolute;
+        width: 10rem;
+        object-fit: cover;
+        border-radius: 100%;
+        border: $border;
+        transform: translate(-50%, -50%);
+        top: 0;
+        left: 50%;
+      }
+
+      .person-name {
+        color: $font-secondary-color;
+        font-size: 2.4rem;
+        margin: 1rem 0;
+      }
+      .person-text {
+        font-size: 1.6rem;
+        width: 90%;
+        margin: 0 auto;
+      }
+    }
+  }
+
+  .icons {
+    width: 30rem;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    
+    i {
+      color: #fff;
+      font-size: 5rem;
+      cursor: pointer;
+      transition: all 0.3s ease-in-out;
+
+      &:hover{
+        color: $primary-color;
+      }
+    }
+  }
+}
+
+@media screen and (max-width:800px) {
+  .testimonial{
+    .container{
+      padding: 0;
+
+      h2{
+        margin-left: 2rem;
+        font-size: 3.5rem;
+      }
+      .testimonial-container{
+        width: 100%;
+      }
+
+    }
+    .icons{
+      width: 60%;
+      min-width: 20rem;
+    }
+
+  }
+
+  
+  
+}
