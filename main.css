@@ -503,4 +503,59 @@ section {
     width: 60%;
     min-width: 20rem;
   }
+}
+.news {
+  background-color: #fff;
+}
+.news .container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.news .container h2 {
+  font-size: 3.6rem;
+  margin-right: 5rem;
+}
+.news .container .form-group {
+  display: flex;
+  align-content: center;
+  justify-content: center;
+}
+.news .container .form-group input {
+  padding: 1rem 2rem;
+  border-radius: 1rem;
+  border: 0.5rem solid #22ca83;
+  min-width: 40rem;
+  font-size: 1.6rem;
+  outline: none;
+}
+.news .container .form-group .btn {
+  margin-left: -14.5rem;
+  color: #fff;
+  border: 0.5rem solid #22ca83;
+}
+.news .container .form-group .btn:hover {
+  color: #000;
+}
+
+@media screen and (max-width: 900px) {
+  .news .container {
+    padding: 0 2rem;
+  }
+  .news .container h2 {
+    width: 100%;
+    margin-right: 0;
+    text-align: center;
+    margin-bottom: 5rem;
+  }
+}
+@media screen and (max-width: 420px) {
+  .news .container .form-group input {
+    min-width: 20rem;
+  }
+  .news .container .form-group .btn {
+    font-size: 1.2rem;
+    margin-left: -11.8rem;
+  }
 }/*# sourceMappingURL=main.css.map */
