@@ -1,11 +1,12 @@
 const menu = document.querySelector(".menu");
+const nav = document.querySelector(".nav");
 const navList = document.querySelector(".nav-list");
 const navItems = document.querySelectorAll(".nav-item");
 const personImage = document.querySelector(".person-image");
 const personName = document.querySelector(".person-name");
 const personText = document.querySelector(".person-text");
-const testiArrowLeft = document.querySelector(".la-arrow-alt-circle-left");
-const testiArrowRight = document.querySelector(".la-arrow-alt-circle-right");
+const testiArrowLeft = document.querySelector(".left");
+const testiArrowRight = document.querySelector(".right");
 let currtentTestimonial = 0;
 
 const persons = [
@@ -44,6 +45,7 @@ navItems.forEach((item) => {
 });
 
 const changeTestimonial = (right) => {
+  
   if (right) currtentTestimonial++;
   if (currtentTestimonial > persons.length - 1) currtentTestimonial = 0;
   if (!right) currtentTestimonial--;
@@ -56,3 +58,22 @@ const changeTestimonial = (right) => {
 
 testiArrowRight.addEventListener("click", () => changeTestimonial(true));
 testiArrowLeft.addEventListener("click", () => changeTestimonial(false));
+
+// header animation
+const headerText = document.querySelector(".header .text-container");
+const headerImage = document.querySelector(".header .image-container");
+
+function addAnimations() {
+  headerText.classList.add("active");
+  headerImage.classList.add("active");
+}
+
+window.addEventListener("DOMContentLoaded", addAnimations);
+
+function fixedNav(e) {
+  const headerHeight = document.querySelector(".header").clientHeight;
+  if (window.scrollY > headerHeight) nav.classList.add("fixed");
+  else nav.classList.remove("fixed");
+}
+
+document.addEventListener("scroll", fixedNav);

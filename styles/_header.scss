@@ -4,10 +4,18 @@
   align-items: center;
   color: #fff;
   margin-top: -2.5rem;
-  
+  position: relative;
+  min-height: calc(100vh - 9rem);
+  overflow: hidden;
 
   .text-container {
     flex: 1;
+    transform: translateX(-100%);
+    transition: $transition;
+
+    &.active {
+      transform: translateX(0);
+    }
 
     h1 {
       width: 50rem;
@@ -23,8 +31,16 @@
   }
 
   .image-container {
+    transform: translateX(100%);
     flex: 1;
     text-align: right;
+    transition: $transition;
+    
+
+
+    &.active {
+      transform: translateX(0%);
+    }
 
     .header-image {
       max-width: 100%;
@@ -62,16 +78,18 @@
     margin-top: 2rem;
     text-align: center;
 
-    .text-container{
-      h1{
+    .text-container {
+      h1 {
         font-size: 3.5;
       }
-      p{
+      p {
         font-size: 1.4rem;
       }
-      h1,p{
+      h1,
+      p {
         width: 100%;
       }
     }
+
   }
 }

@@ -18,35 +18,36 @@
     <link
       href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap"
       rel="stylesheet" />
+    <!-- aos animation -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <script src="app.js" defer></script>
   </head>
   <body>
     <!-- navbar -->
-    <nav>
+    <nav class="nav">
       <div class="container">
-        <div class="nav">
-          <div class="logo-container">
-            <div class="logo">Shozie</div>
-          </div>
-          <ul class="nav-list">
-            <li class="nav-item"><a href="#home" class="nav-link">home</a></li>
-            <li class="nav-item">
-              <a href="#features" class="nav-link">features</a>
-            </li>
-            <li class="nav-item">
-              <a href="#about" class="nav-link">about</a>
-            </li>
-            <li class="nav-item">
-              <a href="#products" class="nav-link">products</a>
-            </li>
-            <li class="nav-item">
-              <a href="#testimonial" class="nav-link">testimonial</a>
-            </li>
-          </ul>
+        <div class="logo-container">
+          <div class="logo">Shozie</div>
+        </div>
 
-          <div class="menu">
-            <i class="las la-bars"></i>
-          </div>
+        <ul class="nav-list">
+          <li class="nav-item"><a href="#home" class="nav-link">home</a></li>
+          <li class="nav-item">
+            <a href="#features" class="nav-link">features</a>
+          </li>
+          <li class="nav-item">
+            <a href="#about" class="nav-link">about</a>
+          </li>
+          <li class="nav-item">
+            <a href="#products" class="nav-link">products</a>
+          </li>
+          <li class="nav-item">
+            <a href="#testimonial" class="nav-link">testimonial</a>
+          </li>
+        </ul>
+
+        <div class="menu">
+          <i class="las la-bars"></i>
         </div>
       </div>
     </nav>
@@ -55,7 +56,7 @@
     <!-- header -->
     <header>
       <div class="container">
-        <div class="header">
+        <div class="header" id="home">
           <div class="text-container">
             <h1><span class="word">Shoe</span> Of The Best Quality</h1>
             <p>
@@ -83,7 +84,7 @@
           <h2 class="section-heading word">features</h2>
           <div class="icons-container">
             <!-- icon 1 -->
-            <div class="icon-box">
+            <div class="icon-box" data-aos="fade-up" data-aos-delay="300">
               <div class="icon">
                 <i class="las la-shield-alt"></i>
               </div>
@@ -93,7 +94,7 @@
               </div>
             </div>
             <!-- icon 2 -->
-            <div class="icon-box">
+            <div class="icon-box" data-aos="fade-up" data-aos-delay="500">
               <div class="icon">
                 <i class="las la-hourglass"></i>
               </div>
@@ -103,7 +104,7 @@
               </div>
             </div>
             <!-- icon 3 -->
-            <div class="icon-box">
+            <div class="icon-box" data-aos="fade-up" data-aos-delay="700">
               <div class="icon">
                 <i class="las la-truck"></i>
               </div>
@@ -119,10 +120,16 @@
       <!-- about -->
       <section class="about" id="about">
         <div class="container">
-          <div class="image-container">
+          <div
+            class="image-container"
+            data-aos="fade-right"
+            data-aos-delay="500">
             <img src="images/about_image.png" alt="" />
           </div>
-          <div class="about-text-container">
+          <div
+            class="about-text-container"
+            data-aos="fade-left"
+            data-aos-delay="300">
             <h2 class="section-heading">
               We Provide <span class="word">High</span> <br />
               quality Shoes.
@@ -148,7 +155,7 @@
 
           <div class="products-container">
             <!-- product 1 -->
-            <div class="card">
+            <div class="card" data-aos="flip-left" data-aos-delay="200">
               <div class="image-container">
                 <img src="images/product_1.png" alt="" class="imgage" />
               </div>
@@ -166,7 +173,7 @@
               <p class="price">100.00$</p>
             </div>
             <!-- product 2 -->
-            <div class="card">
+            <div class="card" data-aos="flip-left" data-aos-delay="400">
               <div class="image-container">
                 <img src="images/product_2.png" alt="" class="imgage" />
               </div>
@@ -184,7 +191,7 @@
               <p class="price">100.00$</p>
             </div>
             <!-- product 3 -->
-            <div class="card">
+            <div class="card" data-aos="flip-left" data-aos-delay="600">
               <div class="image-container">
                 <img src="images/product_3.png" alt="" class="imgage" />
               </div>
@@ -202,7 +209,7 @@
               <p class="price">100.00$</p>
             </div>
             <!-- product 4 -->
-            <div class="card">
+            <div class="card" data-aos="flip-left" data-aos-delay="200">
               <div class="image-container">
                 <img src="images/product_4.png" alt="" class="imgage" />
               </div>
@@ -220,7 +227,7 @@
               <p class="price">100.00$</p>
             </div>
             <!-- product 5 -->
-            <div class="card">
+            <div class="card" data-aos="flip-left" data-aos-delay="400">
               <div class="image-container">
                 <img src="images/product_5.png" alt="" class="imgage" />
               </div>
@@ -238,7 +245,7 @@
               <p class="price">100.00$</p>
             </div>
             <!-- product 6 -->
-            <div class="card">
+            <div class="card" data-aos="flip-left" data-aos-delay="600">
               <div class="image-container">
                 <img src="images/product_6.png" alt="" class="imgage" />
               </div>
@@ -268,7 +275,10 @@
             What Our <br /><span class="word">Customer Says</span>
           </h2>
 
-          <div class="testimonial-container">
+          <div
+            class="testimonial-container"
+            data-aos="zoom-in-up"
+            data-aos-delay="200">
             <img src="images/circle.png" class="circle" />
             <img
               src="images/person.jpg"
@@ -282,8 +292,8 @@
             </p>
           </div>
           <div class="icons">
-            <i class="las la-arrow-alt-circle-left"></i>
-            <i class="las la-arrow-alt-circle-right"></i>
+            <i class="las la-arrow-alt-circle-left left"></i>
+            <i class="las la-arrow-alt-circle-right right"></i>
           </div>
         </div>
       </section>
@@ -345,5 +355,9 @@
       </footer>
       <!-- footer -->
     </main>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
   </body>
 </html>
